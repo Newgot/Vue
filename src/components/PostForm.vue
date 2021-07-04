@@ -20,6 +20,7 @@ export default {
   methods: {
     createPost() {
       this.post.id = Date.now();
+      this.$emit('log', this.post)
       this.$emit("create", this.post);
       this.post = {
         title: "",
